@@ -1,4 +1,6 @@
 #Code before exception handling. See the output for more understanding.
+#This approach can be used for input validation.
+
 def catCount(number):
     if int(number) >= 4:
         print('cat count '+ number +' is not acceptable')
@@ -41,3 +43,24 @@ print('After:')
 print('Enter the number:')
 number = input()          
 catCount(number)
+
+"""Output:
+==== RESTART: G:/pooja_tryouts/python_tryout/tryout8_tryExcept_example.py ====
+Before:
+Enter the number:
+9
+cat count 9 is not acceptable
+After:
+Enter the number:
+ljknm,
+Wrong input....You have not entered the number properly....
+>>> """
+
+
+
+
+
+
+
+
+
