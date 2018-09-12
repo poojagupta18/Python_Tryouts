@@ -7,4 +7,18 @@ new_number = onePlus(4)      #onePlus(4) will be replaced by 5 and get assigned 
 print(new_number)
 
 #Output:
-#5    
+#5 
+
+#Every Function has return type. It is not necessary that each function contains the return statement. If function do not return anything then by default it returns 'None'
+#print() function prints the value and return the none
+
+spam = print('hello')   #print returns None 
+
+if spam == None:
+	print( "True..")
+else:
+	print("False")
+
+#Output:
+#hello
+#True
