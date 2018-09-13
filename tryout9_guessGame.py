@@ -52,7 +52,6 @@ Nope. The number I was thinking of was 14
 Hello. What is your name?
 Al
 Well. Al, I am thinking of a number between 1 and 20
-11
 Take a guess
 1
 Your guess is too low
