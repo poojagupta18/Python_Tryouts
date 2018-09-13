@@ -1,0 +1,103 @@
+
+A list is a value that contains multiple values.
+The values in alist are also called items.
+You can access the items in a list with its integer index.
+The index starts at 0, not 1
+You can use negative index too. -1 refers to the last item.
+You can get multiple items from list using slice.
+Slice has two index.
+
+>>> ['cat','bat','dog','rat']
+['cat', 'bat', 'dog', 'rat']
+>>> spam = ['cat','bat','dog','rat']
+>>> spam[0]
+'cat'
+>>> spam[1]
+'bat'
+>>> spam[2]
+'dog'
+>>> spam[3]
+'rat'
+>>> spam[4]
+Traceback (most recent call last):
+  File "<pyshell#57>", line 1, in <module>
+    spam[4]
+IndexError: list index out of range
+
+#List inside the list
+
+>>> spam = [['cat','rat'],[10,20,30,40]]
+>>> spam[0]
+['cat', 'rat']
+>>> spam[1]
+[10, 20, 30, 40]
+>>> spam[0][1]
+'rat'
+>>> spam[1][3]
+40
+>>> spam =  ['cat','bat','dog','rat']
+>>> spam[-1]
+'rat'
+>>> spam[-2]
+'dog'
+>>> 'The ' + spam[-1] + 'fears the ' + spam[0]
+'The ratfears the cat'
+>>> 'The ' + spam[-1] + ' fears the ' + spam[0]
+'The rat fears the cat'
+
+#slice
+
+>>> spam[1:3]
+['bat', 'dog']
+>>> spam = 'Hello'
+>>> spam
+'Hello'
+>>> spam = [1,2,3,4,5]
+>>> spam[1] = 'Hello'
+>>> spam
+[1, 'Hello', 3, 4, 5]
+>>> spam[1:3] = ['CAT','DOG','MOUSE']
+>>> spam
+[1, 'CAT', 'DOG', 'MOUSE', 4, 5]
+>>> spam[:2]
+[1, 'CAT']
+>>> spam[1:]
+['CAT', 'DOG', 'MOUSE', 4, 5]
+>>> spam
+[1, 'CAT', 'DOG', 'MOUSE', 4, 5]
+>>> del spam[2]
+>>> spam
+[1, 'CAT', 'MOUSE', 4, 5]
+
+#deleting specific element
+
+>>> del spam[3]
+>>> spam
+[1, 'CAT', 'MOUSE', 5]
+>>> len('hello')
+5
+>>> len([1,2,3,4])
+4
+>>> 'Hello '+'World '
+'Hello World '
+>>> [1,2,3]+[4,5,6]
+[1, 2, 3, 4, 5, 6]
+>>> 'Hello'*3
+'HelloHelloHello'
+>>> [1,2,3] * 3
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+>>> int('32')
+32
+>>> str(32)
+'32'
+>>> list('hello')
+['h', 'e', 'l', 'l', 'o']
+
+# in , not in
+>>> 'Cat' in ['Cat', 'Dog', 'rat', 'Lizard']
+True
+>>> 'cat' in  ['Cat', 'Dog', 'rat', 'Lizard']
+False
+>>> 'Cat' not in ['Cat', 'Dog', 'rat', 'Lizard']
+False
+>>> 
