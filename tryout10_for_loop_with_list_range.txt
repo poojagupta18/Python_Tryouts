@@ -1,0 +1,83 @@
+#For loop technically iterates over the values in a list.
+
+>>> for i in range(4):
+	print(i)
+
+	
+0
+1
+2
+3
+>>> range(4)
+range(0, 4)
+>>> [0,1,2,3]
+[0, 1, 2, 3]
+>>> for i in [0,1,2,3]:
+	print(i)
+
+	
+0
+1
+2
+3
+#The range() function returns a list like value, which can be passed to the list() function if you need an actual list value.
+
+range(0, 4)
+>>> list(range(4))
+[0, 1, 2, 3]
+>>> list(range(0,100,2))
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98]
+>>> spam = list(range(0,100,2))
+>>> spam
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98]
+>>> 
+>>> alphabet = ['A','B','C','D','E']
+>>> for i in range(len(alphabet)):
+	print('Index '+ str(i) + ' of ' + alphabet[i] )
+
+	
+Index 0 of A
+Index 1 of B
+Index 2 of C
+Index 3 of D
+Index 4 of E
+>>> 
+>>> 
+>>> 
+>>> cat = ['rat', 'milk', 'rice']
+>>> size = cat[0]
+>>> food = cat[1]
+>>> fvrt = cat[2]
+>>> 
+>>> size
+'rat'
+>>> food
+'milk'
+>>> fvrt
+'rice'
+>>> 
+>>> size, food, fvrt = cat
+>>> size
+'rat'
+>>> food
+'milk'
+>>> fvrt
+'rice'
+
+#Variables can swap their values using multiple assignment.
+>>> 
+>>> a = 'AAAAAAAA'
+>>> b = 'BBBBBBBB'
+>>> a,b = b, a
+>>> a
+'BBBBBBBB'
+>>> b
+'AAAAAAAA'
+
+#Augmented assignment operators like += are used as shortcut.
+>>> spam = 42
+>>> spam = spam + 1
+>>> spam +=1
+>>> spam
+44
+>>> 
