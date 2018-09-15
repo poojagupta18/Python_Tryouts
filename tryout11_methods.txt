@@ -1,0 +1,78 @@
+#This tryout is for different methods.
+
+#index() - This method is used to findout the index of the particular value.
+#syntax -
+         listName.index('value')
+
+>>> spam = ['hello', 'hi', 'hey', 'whatsup']
+>>> spam.index('hi')
+1
+>>> spam.index('whatsup')
+3
+          
+#We can not call like this- index('value'), it will throw the exception         
+>>> index('hi')
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    index('hi')
+NameError: name 'index' is not defined
+
+#If we search for the index which is not present in list, it will throw exception
+>>> spam.index('jskjwdhhdkjdkj')
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    spam.index('jskjwdhhdkjdkj')
+ValueError: 'jskjwdhhdkjdkj' is not in list
+
+#If you have the duplicate values in the list, it will return the 1st index value of wanted value
+>>> spam = ['pune', 'mumbai', 'delhi','pune']
+>>> spam.index('pune')
+0
+
+#list has append() method which inserts the value at the end of the list and insert() method which inserts the value at any mentioned position.
+#append()
+>>> spam = ['cat', 'rat', 'dog', 'bat']
+>>> spam
+['cat', 'rat', 'dog', 'bat']
+>>> spam.append('mouse')
+>>> spam
+['cat', 'rat', 'dog', 'bat', 'mouse']
+>>> spam.append('bird')
+>>> spam.append('bird')
+>>> spam.append('bird')
+>>> spam.append('bird')
+>>> spam
+['cat', 'rat', 'dog', 'bat', 'mouse', 'bird', 'bird', 'bird', 'bird']
+
+#insert()
+>>> spam = ['cat', 'rat', 'dog', 'bat']
+>>> spam.insert(0,'mouse')
+>>> spam
+['mouse', 'cat', 'rat', 'dog', 'bat']
+>>> spam.insert(2,'mouse')
+>>> spam
+['mouse', 'cat', 'mouse', 'rat', 'dog', 'bat']
+>>>
+
+#insert() and append() can only be used on list not on string
+>>> spam = 'hello'
+>>> spam.append('hi')
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    spam.append('hi')
+AttributeError: 'str' object has no attribute 'append'
+>>> spam.insert(1,'hi')
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    spam.insert(1,'hi')
+AttributeError: 'str' object has no attribute 'insert'
+>>> 
+
+
+
+
+
+
+
+
+>>> 
