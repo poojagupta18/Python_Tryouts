@@ -68,11 +68,74 @@ Traceback (most recent call last):
 AttributeError: 'str' object has no attribute 'insert'
 >>> 
 
+#listname.remove(value) - this method remove the value from list by specifying value in the argument
+#del listname[index]  -this method remove the value from list by specifying index
+>>> spam = ['mouse', 'cat', 'rat', 'dog', 'bat']
+>>> spam
+['mouse', 'cat', 'rat', 'dog', 'bat']
+>>> spam.remove('cat')
+>>> spam
+['mouse', 'rat', 'dog', 'bat']
+>>> spam('cat')
+Traceback (most recent call last):
+  File "<pyshell#28>", line 1, in <module>
+    spam('cat')
+TypeError: 'list' object is not callable
+>>> del spam[0]
+>>> spam
+['rat', 'dog', 'bat']
+>>> spam = ['cat', 'dog', 'rat', 'cat', 'cat']
+>>> spam.remove('cat')
+>>> spam
+['dog', 'rat', 'cat', 'cat']
+>>>
 
-
-
-
-
-
-
+#listname.sort() - sort the integer as well as string values
+>>> spam = [-8, 0.9, 1, 10, 16]
+>>> spam.sort()
+>>> spam
+[-8, 0.9, 1, 10, 16]
+>>> spam = ['ants', 'cats', 'elephants', 'dogs']
+>>> spam.sort()
+>>> spam
+['ants', 'cats', 'dogs', 'elephants']
 >>> 
+
+#To sort in descending oreder
+>>> spam.sort(reverse=True)
+>>> spam
+['elephants', 'dogs', 'cats', 'ants']
+
+#python cannot sort the mixed list containing integer and string
+>>> spam = [1,2,3,'alice','dan']
+>>> spam
+[1, 2, 3, 'alice', 'dan']
+>>> spam.sort()
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    spam.sort()
+TypeError: '<' not supported between instances of 'str' and 'int'
+>>> 
+
+#Python sort the list as per ASCII not per alphabet.
+
+>>> spam = ['Alice', 'Carrole', 'Bob', 'ants', 'merry','bill']
+>>> spam.sort()
+>>> spam
+['Alice', 'Bob', 'Carrole', 'ants', 'bill', 'merry']
+>>>
+>>> spam = ['a', 'z', 'A', 'Z']
+>>> spam.sort()
+>>> spam
+['A', 'Z', 'a', 'z']
+>>> soam.sort(key=str.lower)
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    soam.sort(key=str.lower)
+NameError: name 'soam' is not defined
+>>> spam.sort(key=str.lower)
+>>> spam
+['A', 'a', 'Z', 'z']
+>>> 
+
+
