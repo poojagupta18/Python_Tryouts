@@ -1,0 +1,40 @@
+#Similarities between string and list.
+>>> spam = 'hello'
+>>> list(spam)
+['h', 'e', 'l', 'l', 'o']
+>>> 
+>>> name = 'Alice'
+>>> name[0]
+'A'
+>>> name[1:3]
+'li'
+>>> Al in name                  #here AL not 'Al' so it throwing error
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    Al in name
+NameError: name 'Al' is not defined
+
+>>> 'Al' in name
+True
+>>> for letter in name:
+	print(letter)
+
+	
+A
+l
+i
+c
+e
+>>> 
+
+#Mutable and immutable datatypes
+>>> name = 'My name is Alice'
+>>> name[7]
+' '
+>>> name[8]                 #can only access
+'i'
+>>> name [8] = 'I'          #can only access but cannot change as string is immutable.
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    name [8] = 'I'
+TypeError: 'str' object does not support item assignment
