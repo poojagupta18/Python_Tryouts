@@ -38,3 +38,117 @@ Traceback (most recent call last):
   File "<pyshell#15>", line 1, in <module>
     name [8] = 'I'
 TypeError: 'str' object does not support item assignment
+
+#We can change string value as[But it is so complicated]:
+>>> name = 'Zophie a cat'
+>>> newName = name[0:7] + ' the ' + name[8:12]
+>>> newName
+'Zophie  the  cat'
+>>> 
+
+#we can undestand mutability and immutability with the term references.
+#In case of string:
+
+>>> spam = 42
+>>> cheese = spam       #Here we are not storing the reference of spam
+>>> spam = 100          #updating spam
+>>> spam
+100
+>>> cheese              #updated value doesnt come in cheese as it had stored only value not reference
+42
+>>> 
+
+#In case of list, list variable stores the references for mutability.
+>>> spam = [0,1,2,3,4,5]
+>>> cheese = spam
+>>> cheese[1] = 'hello'
+>>> cheese
+[0, 'hello', 2, 3, 4, 5]
+>>> spam
+[0, 'hello', 2, 3, 4, 5]
+>>>
+Problem occurs with this, as changes made list item are reflected in both list variable.
+
+#Immuatable values don't have this problem because they can't be modified "in place".
+They can only be replaced by new value.
+
+def eggs(cheese):             #here reference of list spam is copied in cheese
+    cheese.append(6)          #though cheese will have scope into this function only,it makes the changes using references so even if cheese get destroyed we are able to see changes in spam.         
+
+spam = [1,2,3,4,5]
+eggs(spam)
+print(spam)
+
+"""
+output:
+[1, 2, 3, 4, 5, 6]
+>>>
+"""
+#We can overcome the above problem using deepcopy using import copy and coping using copy.deepcopy(listname)
+>>> import copy
+
+>>> spam = ['A', 'B', 'C', 'D']
+>>> cheese = copy.deepcopy(spam)
+>>> cheese[1] = 42
+>>> cheese
+['A', 42, 'C', 'D']
+>>> spam
+['A', 'B', 'C', 'D']
+>>> 
+
+#we can represent list for readability like:
+>>> spam = ['A', 'B', 'C', 'D']
+>>> cheese = copy.deepcopy(spam)
+>>> cheese[1] = 42
+>>> cheese
+['A', 42, 'C', 'D']
+>>> spam
+['A', 'B', 'C', 'D']
+>>> spam = ['apple',
+	    'banana',
+	    'orange',
+	    'cats'
+	    ]
+>>> spam
+['apple', 'banana', 'orange', 'cats']
+
+#For spacing on new line we can write \[line continuation character] as shown below
+>>> print('four year ago and seven '+\
+	  'days ago')
+	  
+four year ago and seven days ago
+>>> print('Four score and seven ' + 'days ago')
+	  
+Four score and seven days ago
+>>> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
