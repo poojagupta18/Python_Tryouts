@@ -56,7 +56,49 @@ keys(), values(), item()
 dict_keys(['size', 'colour', 'disposition'])
 >>> 
 
+alphabet = {'A' : 'apple', 'B' : 'bat', 'C' : 'cat', 'D' : 'dog'}
+>>> alphabet
+{'A': 'apple', 'B': 'bat', 'C': 'cat', 'D': 'dog'}
 
+To print key in aplhabet dictionary
+>>> for k in alphabet.keys():   
+	print(k)
 
+	
+A
+B
+C
+D
+
+To print values in alphabet dictionary
+>>> for v in alphabet.values():
+	print(v)
+
+	
+apple
+bat
+cat
+dog
+
+item returns key value. If we print k and v it will show output like:
+>>> for k, v in alphabet.items():
+	print(k, v)
+
+	
+A apple
+B bat
+C cat
+D dog
+
+If we print like this(print only one value in for), it will return tupple:
+
+>>> for i in alphabet.items():
+	print(i)
+
+	
+('A', 'apple')
+('B', 'bat')
+('C', 'cat')
+('D', 'dog')
 """
 
