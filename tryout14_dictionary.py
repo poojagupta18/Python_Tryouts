@@ -35,6 +35,8 @@ Traceback (most recent call last):
   File "<pyshell#14>", line 1, in <module>
     myCat['food']
 KeyError: 'food'
+
+
 >>>
 
 In and not in operator:
@@ -100,5 +102,73 @@ If we print like this(print only one value in for), it will return tupple:
 ('B', 'bat')
 ('C', 'cat')
 ('D', 'dog')
+
+If we try to find value of key which is not present in dictory, it will throw key error.
+>>> alphabet
+{'A': 'apple', 'B': 'bat', 'C': 'cat', 'D': 'dog'}
+>>> alphabet['A']
+'apple'
+>>> alphabet['E']
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    alphabet['E']
+KeyError: 'E'
+
+If is not efficient every time, as it supresses the error, so get() method is used
+>>> if 'E' in alphabet:
+	print(alphabet['E'])
+
+	
+>>>
+get() method takes two arguments, first value is true key value and 2nd argument is default value that will be printed when
+true key value is not present.
+
+>>> alphabet
+{'A': 'apple', 'B': 'bat', 'C': 'cat', 'D': 'dog'}
+>>> alphabet.get('D', 0)
+'dog'
+
+As Key E is not present in dictionary, 2nd argument will be displayed:
+>>> alphabet.get('E','Default value if key E is not present in dictionary')
+'Default value if key E is not present in dictionary'
+
+get() method is handy for creating the sentences like:
+>>> picnicItems = {'apples':5, 'cups':2}
+>>> print('I am bringing '+str(picnicItems.get('napkin', 0))+' to the picnic')
+I am bringing 0 to the picnic
+>>> 
+>>> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
 
