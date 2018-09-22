@@ -1,5 +1,6 @@
 """Like List dictionary is collection of many values, unlike list dictories can have indexes of any datatype not only integers.
 Key with associated values is called key-value pair
+Dictionaries are mutable. Variables hold references to dictionary values, not the dictionary value itself.
 
 Dictionaries are represented using {}
 
