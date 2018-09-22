@@ -139,6 +139,31 @@ I am bringing 0 to the picnic
 >>> 
 >>> 
 
+>>> eggs = {'name' : 'zophie', 'species' : 'cat', 'age' : 8}
+>>> eggs
+{'name': 'zophie', 'species': 'cat', 'age': 8}
+>>> if 'colour' not in eggs:
+	eggs['colour'] = 'black'
+
+	
+>>> eggs
+{'name': 'zophie', 'species': 'cat', 'age': 8, 'colour': 'black'}
+>>>
+
+we can do this in one line using setDefault() method
+setdefault() method takes two arguments 1st argument is key and 2nd argument is value
+>>> eggs.setdefault('property','self')
+'self'
+>>> eggs
+{'name': 'zophie', 'species': 'cat', 'age': 8, 'colour': 'black', 'property': 'self'}
+>>>
+>>> eggs.setdefault('colour','orange')
+'black'
+>>> eggs
+{'name': 'zophie', 'species': 'cat', 'age': 8, 'colour': 'black', 'property': 'self'}
+>>> 
+setdefault() can't change the value of key which already exist. It 1st check whether that key is present or not, if key is present it will returns its value, if key doesn't exist it will set that key in dictionary.
+
 
 
 
