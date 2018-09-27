@@ -38,6 +38,8 @@ True
 playing again
 >>> spam = 'Hello world!'
 >>> spam.islower()
+
+
 False
 >>> spam = 'hello world!'
 >>> spam.islower()
@@ -101,4 +103,49 @@ True
 False
 >>> 
 
+ #startswith()
+>>> 'Hello world!'.startswith('Hello')
+True
+>>> 'Hello world!'.startswith('H')
+True
+>>> 'Hello world!'.startswith('ello')
+False
+
+#endswith()
+>>> 'Hello world!'.endswith('world!')
+True
+>>> 'Hello world!'.endswith('world')
+False
+>>> 
+
+#To join list of strings join() method is used.
+>>> ','.join(['cats','rats','bats'])
+'cats,rats,bats'
+>>> ''.join(['cats','rats','bats'])
+'catsratsbats'
+>>> ' '.join(['cats','rats','bats'])
+'cats rats bats'
+>>> '\n\n\n'.join(['cats','rats','bats'])
+'cats\n\n\nrats\n\n\nbats'
+>>> print('\n\n\n'.join(['cats','rats','bats']))
+cats
+
+
+rats
+
+
+bats
+>>>
+
+#split() method is opposite to join, it splits the individual string based upon the cwhewhite space
+
+>>> 'My name is Alice'.split()
+['My', 'name', 'is', 'Alice']
+>>>
+
+#we can also split based upon the character we want.
+#Here we split on character 'm'
+>>> 'My name is Alice'.split('m')
+['My na', 'e is Alice']
+>>>
 
