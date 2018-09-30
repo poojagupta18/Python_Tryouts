@@ -149,3 +149,65 @@ bats
 ['My na', 'e is Alice']
 >>>
 
+#ljust() and rjust():
+ ljust() method adds the space padding at the end of the text to make the length equal to mentioned argument.
+ rjust()method adds the space padding before the text to make the length equal to mentioned argument.
+>>> 'Hello'.ljust(10)
+'Hello     '
+>>> 'Hello'.rjust(10)
+'     Hello'
+>>> len('     Hello')
+10
+>>> 
+
+#We can also add different characters instead of space using 2nd parameter.
+ljust() method adds anything instead of space for padding using 2nd parameter at the end of the text to make the length equal to mentioned argument.
+rjust()method adds anything instead of space for padding before the text to make the length equal to mentioned argument and to justify the string towards
+right.
+>>> 'Hello'.ljust(10,'*')
+'Hello*****'
+>>> 'Hello'.rjust(10,'-')
+'-----Hello'
+>>>
+
+#center() is used to justify the text at the center:
+>>> 'Hello'.center(20)
+'       Hello    
+>>> 'Hello'.center(20,'*')
+'*******Hello********'
+>>>
+
+#To remove the space from right, left or both side rstrip(), lstrip(), strip() methods are used.
+
+>>> 
+>>> 'Hello'.rjust(10)
+'     Hello'
+>>> 'Hello'.rjust(10).lstrip()
+'Hello'
+>>> spam = 'Hello'.rjust(10)
+>>> spam.lstrip()
+'Hello'
+>>> 
+
+>>> sapm = '    Hello      '
+>>> spam.strip()
+'Hello'
+>>>
+
+>>> spam = 'Hello           '
+
+#We can also remove the characters from end of the text using second argument:
+>>> 'SpamSpamBaconSpamEggsSpamSpam'.strip('ampS')
+'BaconSpamEggs'
+>>> 'SpamSpamBaconSpamEggsSpamSpam'.strip('amp')
+'SpamSpamBaconSpamEggsSpamS'
+>>> 'SpamSpamBaconSpamEggsSpamSpam'.strip('a')
+'SpamSpamBaconSpamEggsSpamSpam'
+>>> 
+
+#replace(string which to be replace, replacement string):
+>>> 
+>>> spam = 'Hello Their!'
+>>> spam.replace('e','xyz')
+'Hxyzllo Thxyzir!'
+>>> 
