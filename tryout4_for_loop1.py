@@ -11,7 +11,7 @@ for i in range (12,15):               #This loop iterates from i=12 to i=14 (ite
 #To understand range() with three argumnets range(start,end,step)
 #Here steps means increment/decrement to start.Step can be +ve or -ve
 print('Working of range() with three argument')
-for i in range (0,10,2):               #This loop iterates from i=12 to i=14 (iterates upto 15 but does not include 15)
+for i in range (0,10,2):              
 	print('Number is ' + str(i))
 
 	
