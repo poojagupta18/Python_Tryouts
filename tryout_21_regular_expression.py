@@ -22,6 +22,24 @@ def isPhoneNumber(text):        # 415-555-2121
             return False       #missing last 4 digits
     return True
 
-print(isPhoneNumber('123-454-9898'))     # True
-print(isPhoneNumber('12-232-909090'))    # False
-print(isPhoneNumber('hello'))            # False     
+print(isPhoneNumber('123-454-9898'))     #O/p: True
+print(isPhoneNumber('12-232-909090'))    #     False
+print(isPhoneNumber('hello'))            #     False     
+
+# If we want to find the phone number from textm we will store the whole text in one variable and divide in chunks of 12 digit to recognize whether phone number is present or not.
+
+message = 'call me 415-898-9090 tomorrow, or at 415-292-8989 today'
+foundNumber = False
+for i in range (len(message)):
+    chunk = message[i:i+12]
+    if isPhoneNumber(chunk):
+        print('Phone number found : '+ chunk)
+        foundNumber = True
+if not foundNumber:
+    print('Phone number not found!')
+#O/p: Phone number found : 415-898-9090
+#     Phone number found : 415-292-8989    
+        
+
+
+        
