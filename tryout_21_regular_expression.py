@@ -1,4 +1,5 @@
-#Regular expressions are mini-language for specifying text patterns. Writing code to do pattern matching without regular expression is a huge pain.
+#Regular expressions are mini-language for specifying text patterns.
+#Writing code to do pattern matching without regular expression is a huge pain.
 
 #We can recognize by observing 415-433-2222 is a canada phone number. But 232,454,9090 is not a phone number.
 
@@ -26,7 +27,7 @@ print(isPhoneNumber('123-454-9898'))     #O/p: True
 print(isPhoneNumber('12-232-909090'))    #     False
 print(isPhoneNumber('hello'))            #     False     
 
-# If we want to find the phone number from textm we will store the whole text in one variable and divide in chunks of 12 digit to recognize whether phone number is present or not.
+# If we want to find the phone number from text we will store the whole text in one variable and divide in chunks of 12 digit to recognize whether phone number is present or not.
 
 message = 'call me 415-898-9090 tomorrow, or at 415-292-8989 today'
 foundNumber = False
@@ -37,9 +38,38 @@ for i in range (len(message)):
         foundNumber = True
 if not foundNumber:
     print('Phone number not found!')
-#O/p: Phone number found : 415-898-9090
+# O/p: Phone number found : 415-898-9090
 #     Phone number found : 415-292-8989    
-        
+
+#----------------------------------------------------
+# Pattern matching using Regular Expression.        
+# import the re module first.
+# call the re.compile() function to create a regex object.
+# call the regex object's search() method to create a match object.
+# call the matched object's group() method to get the matched string.
+# \d is the regex for a numberic digit character.
+
+import re
+
+message = 'call me 415-898-9090 tomorrow, or at 415-292-8989 today'
+
+# Regex strings often uses \(backslashes), so they are often a raw strings: r'\d'
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo = phoneNumRegex.search(message)
+print(mo.group())
+
+# Output: 415-898-9090     It will print for first occurance of phone number pattern.
+
+# findall() method is used for searching all the patterns within the text.
+# findall() return the output in list format only so group() is not required.
+message = 'call me 415-898-9090 tomorrow, or at 415-292-8989 today'
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+print(phoneNumRegex.findall(message))
+
+# Output:   ['415-898-9090', '415-292-8989']
+
+
 
 
         
