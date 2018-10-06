@@ -69,6 +69,37 @@ print(phoneNumRegex.findall(message))
 
 # Output:   ['415-898-9090', '415-292-8989']
 
+#----------------------------------------
+# Groups are craeted in regex strings with paranthesis,
+# The 1st set of paranthesis is group 1, the second is 2, and so on.
+# calling group() or group(0) returns the full matching string, group(1) returns group 1's matchimg string, and so on.
+# Use \(and \) to match literals paranthesis in the regex string.
+# The | pipe can match one of many possible groups.
+
+phoneNumRegex = re.compile(r'(\d\d\d)-\d\d\d-\d\d\d\d')
+mo = phoneNumRegex.search('call me 415-898-9090 tomorrow, or at 415-292-8989 today')
+print(mo.group())  # O/p: 415-898-9090
+print(mo.group(1)) #      415
+#print(mo.group(2)) #      IndexError: no such group
+
+phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+mo = phoneNumRegex.search('call me 415-898-9090 tomorrow, or at 415-292-8989 today')
+print(mo.group())  # O/p: 415-898-9090
+print(mo.group(1)) #      415
+print(mo.group(2)) #      898-9090
+
+#If your text contains paranthesis, use \ before paranthesis.
+
+phoneNumRegex = re.compile(r'\(\d\d\d\)-(\d\d\d-\d\d\d\d)')
+mo = phoneNumRegex.search('call me (415)-898-9090 tomorrow, or at 415-292-8989 today')
+print(mo.group())  # O/p:  (415)-898-9090
+print(mo.group(1)) #       898-9090
+#print(mo.group(2)) #      898-9090
+
+
+
+
+
 
 
 
