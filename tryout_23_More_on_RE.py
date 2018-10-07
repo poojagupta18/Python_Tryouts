@@ -29,6 +29,16 @@ Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'group'
 >>> mo == None
 True
+>>>
+# Lets consider the example of phone number which doesn't contain area code.
+>>> phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d')  #(\d\d\d-)? It says, preceding group is optional.
+>>> mo = phoneRegex.search('My phone number is 245-222-2222')
+>>> mo.group()
+'245-222-222'
+
+>>> mo = phoneRegex.search('My phone number is 222-2222. Call me Tomorrow.')
+>>> mo.group()
+'222-222'
 >>> 
 
 # The + says the group matches one or more times.
@@ -38,21 +48,3 @@ True
 # Leaving out the first or second number in the curly braces says there is no minimum or maximum.
 # This tryout is performed on Python Idle(Note: >>> shows commands performed on Idle)
 # ? (Zero or one)
->>> import re
->>> 
->>> batRegex = re.compile(r'Batman|Batwoman')
->>> mo = batRegex.search('Batman')
->>> mo.group()
-'Batman'
->>> 
-
-#Above same eg Using ?
-
->>> batRegex = re.compile(r'Bat(wo)?man')
->>> mo = batRegex.search('Batwoman')
->>> mo.group()
-'Batwoman'
->>> mo = batRegex.search('Batman')
->>> mo.group()
-'Batman'
->>> 
