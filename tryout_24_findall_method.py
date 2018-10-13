@@ -24,7 +24,7 @@ QUALITY CONTROL—Maintained high quality standards with an emphasis on accuracy
 >>>
 # Search method always returns 1st match.
 
-# findall() returns all the matched string within the list.
+# findall() returns list of strings matching the pattern.
 
 >>> phoneRegex.findall(resume)
 ['723-525-5555', '424-898-9009']
@@ -34,6 +34,20 @@ QUALITY CONTROL—Maintained high quality standards with an emphasis on accuracy
 # If the regex has no groups(0 or 1), findall() returns a list of string.
 
 # If the regex has 2 or more groups, findall() returns a list of tuples of strings.
+
+>>> phoneRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+>>> phoneRegex.findall(resume)
+[('723', '525-5555'), ('424', '898-9009')]
+>>>
+
+# you can see no dash(-) in output as - is not in group.
+
+# To obtain whole string as well :
+
+>>> phoneRegex = re.compile(r'((\d\d\d)-(\d\d\d-\d\d\d\d))')
+>>> phoneRegex.findall(resume)
+[('723-525-5555', '723', '525-5555'), ('424-898-9009', '424', '898-9009')]
+>>> 
 
 # \d is shorthand character class that matches digits.
 
