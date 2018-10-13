@@ -47,7 +47,8 @@ QUALITY CONTROL—Maintained high quality standards with an emphasis on accuracy
 >>> phoneRegex = re.compile(r'((\d\d\d)-(\d\d\d-\d\d\d\d))')
 >>> phoneRegex.findall(resume)
 [('723-525-5555', '723', '525-5555'), ('424-898-9009', '424', '898-9009')]
->>> 
+>>>
+# \d can be represent as 0|1|2|3|4|5|6|7|8|9
 
 # \d is shorthand character class that matches digits.
 
