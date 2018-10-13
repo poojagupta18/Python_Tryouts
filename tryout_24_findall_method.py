@@ -58,6 +58,28 @@ QUALITY CONTROL—Maintained high quality standards with an emphasis on accuracy
 
 # The uppercase shorthand characters \D, \W. \S match characters that are not digits, word characters and spaces.
 
-# You can make your own character classes with [aieuo]
+>>> spellingRegex = '''
+ 1 one,2 two,3 three,4 four,5 five,6 six,7 seven,8 eight,9 nine,10 ten.'''
+>>> spellRegex = re.compile(r'\d+\s\w+')
+>>> spellRegex.findall(spellingRegex)
+['1 one', '2 two', '3 three', '4 four', '5 five', '6 six', '7 seven', '8 eight', '9 nine', '10 ten']
+>>> 
+
+# You can make your own character classes with [aieuo]. [a-z] can be used to find any character between a to z(similar for A-Z).
+
+>>> vowelRegex = re.compile(r'[aieouAEIOU]')
+>>> voweelRegex.findall('Today is wenEsDAy.')
+>>> vowelRegex.findall('Today is wenEsDAy.')
+['o', 'a', 'i', 'e', 'E', 'A']
+>>> vowelRegex = re.compile(r'[^aieouAEIOU]')
+
+# To match exactly two vowels.
+>>> vowelRegex.findall('Tooday is wednesDAy.')
+['oo']
+>>> 
 
 # A ^ caret makes it a negative character class, matching anything not in [^aieou]
+
+>>> vowelRegex.findall('Today is wenEsDAy.')
+['T', 'd', 'y', ' ', 's', ' ', 'w', 'n', 's', 'D', 'y', '.']
+>>> 
