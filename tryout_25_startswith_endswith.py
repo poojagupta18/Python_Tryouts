@@ -17,4 +17,14 @@ True
 >>> endsWithWorldregex.search('Hello world! hiiii')
 >>> endsWithWorldregex.search('Hello world! hiiii') == None
 True
+>>>
+
+# Following pattern suggests it is of digits only.
+
+>>> allDigitRegex = re.compile(r'^\d+$')
+>>> allDigitRegex.search('233218977443')
+<re.Match object; span=(0, 12), match='233218977443'>
 >>> 
+
+>>> allDigitRegex.search('233218n977443') == None
+True
