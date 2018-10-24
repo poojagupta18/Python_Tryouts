@@ -28,3 +28,16 @@ True
 
 >>> allDigitRegex.search('233218n977443') == None
 True
+
+# . means anything except newline.
+>>> atRegex = re.compile(r'.at')
+>>> atRegex.findall('The cat in the Hat sat on the flat mat')
+['cat', 'Hat', 'sat', 'lat', 'mat']
+>>> 
+
+# Here f of flat is not outputted as . shows for only one character. So, .{1,2} is used for 1 or 2 character.
+
+>>> atRegex = re.compile(r'.{1,2}at')
+>>> atRegex.findall('The cat in the Hat sat on the flat mat')
+[' cat', ' Hat', ' sat', 'flat', ' mat']
+>>> 
