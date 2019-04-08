@@ -55,7 +55,8 @@ print(age)
 #we can change the global variable value from the local scope---------
 def func1():
     global age    
-    age = 20;     #it will refer to global variable age as in previous statement it is referred as global
+    age = 20;    
+#it will refer to global variable age as in previous statement as it is referred as global
 
 age = 40
 func1()
